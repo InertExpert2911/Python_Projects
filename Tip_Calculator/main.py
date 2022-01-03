@@ -1,19 +1,19 @@
 print("Welcome to the tip calculator!")
 
-total_bill = float(input("What was the total bill? $"))
+bill = float(input("What was the total bill? $"))
 
 tip = int(input("How much tip would you like to give? 10, 12, or 15? "))
 
-tip_cal = total_bill * (1 + tip / 100)
-
 people = int(input("How many people to split the bill? "))
 
-total_amt = tip_cal / people
+bill_and_tip = bill * (1 + tip / 100)
 
-final_amt = round(total_amt, 2)
+amt_per_person = bill_and_tip / people
 
-final_amt = "{:.2f}".format(total_amt)
+round_amt = round(amt_per_person, 2)
 
-print(f"Each person should pay: ${final_amt}")
+formated_amt = "{:.2f}".format(amt_per_person)
+
+print(f"Each person should pay: ${formated_amt}")
 
 #https://replit.com/@TharunReddy5/TipCalculator#main.py
