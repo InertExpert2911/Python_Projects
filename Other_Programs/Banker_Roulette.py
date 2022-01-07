@@ -8,7 +8,6 @@ names_string = input("Give me everybody's names, separated by a comma. ")
 # .split() --> Converts a string into a list based on the specified special characters.
 names = names_string.split(", ")
 
-#Write your code below this line 👇
 length_of_list = len(names)
 
 # Random Number
