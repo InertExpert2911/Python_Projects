@@ -10,4 +10,4 @@ user_pet = input("Enter your pet's name?\n")
 #4. Combine the name of their city and pet and show them their band name.
 print("Your band name could be " + user_city + " " + user_pet )
 
-# https://replit.com/@TharunReddy5/BandNameGenerator#Band_Name_Generation.py
+# https://replit.com/@TharunReddy5/BandNameGenerator#main.py
