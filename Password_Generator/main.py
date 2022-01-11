@@ -73,4 +73,4 @@ for char in password_list:
 
 print(f"Your strong password is {password}")
 
-
+# https://replit.com/@TharunReddy5/PasswordGenerator#main.py
