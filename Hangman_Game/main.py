@@ -54,3 +54,5 @@ while not game_is_finished:
     
     # Printing the ASCII Art.
     print(stages[lives])
+    
+# https://replit.com/@TharunReddy5/HangmanGame
