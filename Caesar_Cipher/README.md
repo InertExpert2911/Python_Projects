@@ -1,4 +1,4 @@
-# The Cipher Encrypts and Decrypts the user input by the inputted shift amount.
+# The Cipher Encrypts and Decrypts the user input by the shift amount.
 ```
 Example: If your input for encode function is 'apple', shift_amount = 2
          ENCODE: 'crrng'
