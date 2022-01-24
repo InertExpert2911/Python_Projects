@@ -84,7 +84,7 @@ def calculator():
       calculator()
 
 
-# Calling calculator fucntion to run all code inside the function.
+# Calling calculator function to run all code inside the function.
 calculator()
 
 
