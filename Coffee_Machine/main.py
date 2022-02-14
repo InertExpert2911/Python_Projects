@@ -88,7 +88,7 @@ while machine_is_on:
     # user input.
     user_choice = input("What would you like? (espresso/latte/cappuccino): ")
 
-    # To switch off the machine for maintainance.
+    # To switch off the machine for maintenance.
     if user_choice == "off":
         machine_is_on = False
         # exit() --> This will work the same as the above flag.
