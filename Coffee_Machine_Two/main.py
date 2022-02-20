@@ -2,12 +2,14 @@ from menu import Menu
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
+# Creating Objects
 coffee_maker = CoffeeMaker()
 money_machine = MoneyMachine()
 menu = Menu()
 
 
 machine_is_on = True
+
 
 while machine_is_on:
     
@@ -27,7 +29,7 @@ while machine_is_on:
 
     else:
         
-        # Finding the user's drink.
+        # Finding the user's drink and its associated attributes.
         drink = menu.find_drink(user_choice)
         
         # Checking if resources are sufficient and payment is successful.
