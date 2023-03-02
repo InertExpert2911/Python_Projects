@@ -25,6 +25,8 @@ for height in student_heights:
     # total_students is increased by 1 for every for loop iteration
     total_students += 1
 
+# You  can alternatively use sum() and avg() functions to do the above same functionality
+
 # Calculate average and round-off the result
 average_of_student_heights = round(total_heights / total_students)
 
