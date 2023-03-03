@@ -10,13 +10,21 @@ total_people = int(input("How many people to split the bill? "))
 # Ex: Each person should pay (150.00 / 5) * 1.12 = 33.6
 bill_amount_to_pay = (bill_amount / total_people) * (1 + tip_percentage / 100)
 
-# SOLUTION-1: Rounding-off to 2 decimal places
+# ----------------------------------------------------------------------------------------------------------
+
+# SOLUTION-1: Rounding-off to 2 decimal 
+
 # EX: (number, number_of_digits)
 # print(f"Each person should pay: ${round(bill_amount_to_pay, 2)}")
 
+# ----------------------------------------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------------------------------------
 
 # SOLUTION-2: Using format(num, ".2f") to format the amount to 2 decimal digits
 rounded_off_amount_to_pay = format(bill_amount_to_pay, ".2f")
 
 # Printing the final result in an  f-string
 print(f"Each person should pay: ${rounded_off_amount_to_pay}")
+
+# ----------------------------------------------------------------------------------------------------------

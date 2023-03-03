@@ -1,12 +1,12 @@
 # Variable to store students height
 # str.split() function is used to split a string to a list
 # You can specify the separator, default separator is any whitespace
-# Ex: str.split(",") -- splits based on a comma in the string
+# Eg: str.split(",") -- splits based on a comma in the string
 student_heights = input("Input a list of student heights ").split()
 
 # For loops give more control than while loops
 # range (start, end, step) to generate a range of numbers, here we are using range to go through from 0 to the length of the list - 1, stays in the bounds of list
-# Ex: range (0, 10, 2) >>> 0 2 4 6 8 (Start (0) is included but end (10) is excluded)
+# Eg: range (0, 10, 2) >>> 0 2 4 6 8 (Start (0) is included but end (10) is excluded)
 for n in range(0, len(student_heights)):
     # Get the input using the index of n from the list and convert it into an integer
     student_heights[n] = int(student_heights[n])

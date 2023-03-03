@@ -17,7 +17,9 @@ for score in student_scores:
         # Store the value of score, so that we replace the value every time the above if case is satisfied
         highest_student_score = score
 
+# ----------------------------------------------------------------------------------------------------------
 # You can alternatively use max(list) to get the highest item in the list
+# ----------------------------------------------------------------------------------------------------------
 
 # Print the result
 print(f"The highest  student score in the class is: {highest_student_score}")
