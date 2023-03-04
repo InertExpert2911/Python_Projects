@@ -69,4 +69,4 @@ else:
         print("Draw, try again.")
     # Catch all lost cases
     else:
-        print("You lost.") 
+        print("You lost.")
