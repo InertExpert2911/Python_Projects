@@ -4,8 +4,6 @@ import os
 # Import random module
 import random
 
-# TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
-
 # Delete this line: word_list = ["aardvark", "baboon", "camel"]
 
 # Import words from hangman words file
@@ -22,8 +20,6 @@ end_of_game = False
 
 # Holds the number of guesses we want to give to the user
 lives = 6
-
-# TODO-3: - Import the logo from hangman_art.py and print it at the start of the game
 
 # Get logo and stages from the hangman art file
 from hangman_art import logo, stages
@@ -48,9 +44,9 @@ while not end_of_game:
     # To clear the screen
     os.system('cls')
 
-    # TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know (the letter that the user got right)
+    # If the user has entered a letter they've already guessed, print the letter and let them know (the letter that the user got right)
     
-    # Let the user know if he guessed a letter that is already guessed, which is present in display list
+    # Let the user know if they guessed a letter that is already guessed, which is present in display list
     if guess in display:
         print(f"You have already guessed letter '{guess}'")
     
@@ -69,7 +65,7 @@ while not end_of_game:
     # Check if user is wrong.
     if guess not in chosen_word:
         
-        # TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word
+        # If the letter is not in the chosen_word, print out the letter and let them know it's not in the word
         
         # Simple hint to the user
         print(f"You guessed letter '{guess}', that's not in the word. You lost a life.")
@@ -89,8 +85,6 @@ while not end_of_game:
     if "_" not in display:
         end_of_game = True
         print("You win.")
-
-    # TODO-2: - Import the stages from hangman_art.py and make this error go away
     
     # Printing the hangman art every iteration
     print(stages[lives])
