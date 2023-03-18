@@ -1,3 +1,5 @@
+# The program takes input (city, pet) and clubs them together.
+
 # Greet the user
 print("Welcome to the Band Name Generator.")
 

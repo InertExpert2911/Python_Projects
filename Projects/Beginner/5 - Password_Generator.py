@@ -1,3 +1,5 @@
+# A program that generates a random password.
+
 # Import Random module
 import random
 

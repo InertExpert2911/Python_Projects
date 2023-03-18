@@ -1,3 +1,5 @@
+# A Rock, Paper and Scissors game against a computer.
+
 # Import random module
 import random
 

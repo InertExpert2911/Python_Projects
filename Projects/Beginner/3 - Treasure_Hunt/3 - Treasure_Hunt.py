@@ -1,3 +1,5 @@
+# A program that user has to make choices to get the treasure.
+
 # ASCII art
 print("""
  _____                                   _   _             _   

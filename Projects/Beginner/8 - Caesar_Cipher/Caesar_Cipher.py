@@ -1,3 +1,11 @@
+# The Cipher Encrypts and Decrypts the user input by the shift amount.
+# ------------------------------------------ EXAMPLE --------------------------------------------
+# Example: If your input for encode function is 'apple', shift_amount = 2
+# ENCODE: 'crrng'
+# If your input for decode function is 'crrng', shift_amount = 2
+# DECODE: 'apple'
+# ------------------------------------------ ANOTHER METHOD --------------------------------------------
+
 # Function to encrypt and decrypt. with parameters
 def caesar(input_text, shift_amount, input_direction):
 

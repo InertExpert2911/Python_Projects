@@ -1,3 +1,5 @@
+# A Simple Tip Calculator.
+
 # Welcome print statement
 print("Welcome to the tip calculator!")
 
