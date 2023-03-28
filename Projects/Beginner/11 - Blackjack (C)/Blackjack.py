@@ -1,13 +1,5 @@
 # A game of Blackjack
 
-
-############### Blackjack Project #####################
-
-# Difficulty Normal 😎: Use all Hints below to complete the project.
-# Difficulty Hard 🤔: Use only Hints 1, 2, 3 to complete the project.
-# Difficulty Extra Hard 😭: Only use Hints 1 & 2 to complete the project.
-# Difficulty Expert 🤯: Only use Hint 1 to complete the project.
-
 ############### Our Blackjack House Rules #####################
 
 # The deck is unlimited in size.
@@ -34,66 +26,127 @@
 # Hint 3: Download and read this flow chart I've created:
 #   https://drive.google.com/uc?export=download&id=1rDkiHCrhaf9eX7u7yjM1qwSuyEk-rPnt
 
+import random
 
+# user_hand = []
+# dealer_hand = []
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Hint 4: Create a deal_card() function that uses the List below to *return* a random card.
-# 11 is the Ace.
 # cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
-# Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
-# user_cards = []
-# computer_cards = []
+# sample() method returns a list with a randomly selection of a specified number of items from a sequence.
+# This method does not change the original sequence.
 
-# Hint 6: Create a function called calculate_score() that takes a List of cards as input
+# Eg: Return a list that contains any 2 of the items from a list:
+# import random
+# my_list = ["apple", "banana", "cherry"]
+# print(random.sample(my_list, k=2))
+
+
+# user_hand += random.sample(cards, 2)
+# dealer_hand += random.sample(cards, 2)
+
+# print(user_hand)
+# print(dealer_hand)
+
+# user_score = sum(user_hand)
+# dealer_score = sum(dealer_hand)
+
+# print(user_score)
+# print(dealer_score)
+
+# if user_score == 21:
+#     print("User wins the round!")
+# elif dealer_score == 21:
+#     print("The dealer wins this round, you lost.")
+# else:
+#     if user_score > 21:
+#         if 11 in user_hand:
+#             print("User has ACE")
+#             # TODO: IF ace counts as a 1 instead of 11 are they still over 21?
+            
+#         else:
+#             print("You lost")
+
+
+
+# Function that uses the List below to *return* a random card.
+# 11 is the Ace.
+def deal_card():
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    return random.choice(cards)
+
+
+user_cards = []
+computer_cards = []
+
+# Deal the user and computer 2 cards each using deal_card() and append().
+
+user_cards.append(deal_card())
+user_cards.append(deal_card())
+
+computer_cards.append(deal_card())
+computer_cards.append(deal_card())
+
+print(user_cards)
+print(computer_cards)
+
+# Hint 6: Create a function called calculate_score() that takes a list of cards as input
 # and returns the score.
 # Look up the sum() function to help you do this.
 
-# Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
+def calculate_score(list_of_cards):
+    
+    score = sum(list_of_cards)
+    # Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 
+    if score == 21:
+        # 0 will represent a blackjack in our game.
+        return 0
+    
+    # Hint 8: Inside calculate_score() check for an 11 (ace). If the score is already over 21, remove the 11 and replace it with a 1. You might need to look up append() and remove().
+    if 11 in list_of_cards and score > 21:
+        
+        list_of_cards.remove(11)
+        list_of_cards.append(1)
+        
+        # Another way can be to get the index and replace the item at that specific index
+        # index_of_ace = list_of_cards.index(11)
+        # list_of_cards[index_of_ace] = 1
+    
+    return sum(list_of_cards)
 
-# Hint 8: Inside calculate_score() check for an 11 (ace). If the score is already over 21, remove the 11 and replace it with a 1. You might need to look up append() and remove().
 
 # Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
 
-# Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
+game_end = False
+
+while not game_end:
+    user_score = calculate_score(user_cards)
+    computer_score = calculate_score(computer_cards)
+
+    print(user_score)
+    print(computer_score)
+
+    if user_score == 0:
+        print("You won the game")
+        if computer_score == 0:
+            print("Computer wins")
+        if user_score > 21 or computer_score > 21:
+            print("")
+
+    # Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
+    if user_score != 0 and computer_score != 0:
+        choice_to_add_a_card = input("Do you want another card? Type 'yes' or 'no'").lower()
+        
+        if choice_to_add_a_card == 'yes':
+            user_cards.append(deal_card())
+            print(user_cards)
+        else:
+            game_end = True
+            print("END")
+
 
 # Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
+
 
 # Hint 12: Once the user is done, it's time to let the computer play. The computer should keep drawing cards as long as it has a score less than 17.
 
